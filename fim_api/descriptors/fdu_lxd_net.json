@@ -1,0 +1,41 @@
+{
+    "id": "lxd_example_fdu",
+    "name": "test_1",
+    "computation_requirements": {
+        "cpu_arch": "x86_64",
+        "cpu_min_freq": 0,
+        "cpu_min_count": 1,
+        "ram_size_mb": 128.0,
+        "storage_size_gb": 5.0
+    },
+    "image": {
+        "uri": "lxd://alpine/edge",
+        "checksum": "",
+        "format": ""
+    },
+    "storage": [],
+    "hypervisor": "LXD",
+    "migration_kind": "COLD",
+    "interfaces": [
+        {
+            "name": "eth0",
+            "is_mgmt": false,
+            "if_type": "INTERNAL",
+            "virtual_interface": {
+                "intf_type": "VIRTIO",
+                "vpci": "",
+                "bandwidth": 10
+            },
+            "cp_id": "test-cp1"
+        }
+    ],
+    "io_ports": [],
+    "connection_points": [
+        {
+            "id": "test-cp1",
+            "name": "example_internal_cp1",
+            "vld_ref": "6cc2aa30-1dcf-4c93-a57e-433fd0bd498e"
+        }
+    ],
+    "depends_on": []
+}

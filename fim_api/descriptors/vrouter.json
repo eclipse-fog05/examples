@@ -1,0 +1,13 @@
+{
+    "uuid": "f2df1b49-1f96-4bce-a35b-e5a8a82adae2",
+    "ports": [
+        {
+            "port_type": "EXTERNAL"
+        },
+        {
+            "port_type": "INTERNAL",
+            "vnet_id": "6cc2aa30-1dcf-4c93-a57e-433fd0bd498e",
+            "ip_address": "192.168.234.1/24"
+        }
+    ]
+}
