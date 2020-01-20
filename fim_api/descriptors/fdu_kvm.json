@@ -5,14 +5,15 @@
         "cpu_arch": "x86_64",
         "cpu_min_freq": 0,
         "cpu_min_count": 1,
-        "ram_size_mb": 128,
-        "storage_size_gb": 3
+        "ram_size_mb": 128.0,
+        "storage_size_gb": 3.0
     },
     "image": {
         "uri": "file:///home/ubuntu/bench.qcow2",
         "checksum": "2935701ae23b433966a5eed237de981257b8af60",
         "format": "qcow2"
     },
+    "storage":[],
     "hypervisor": "KVM",
     "migration_kind": "LIVE",
     "depends_on": [],
