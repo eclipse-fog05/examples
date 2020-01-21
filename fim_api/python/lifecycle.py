@@ -1,5 +1,5 @@
 from fog05 import FIMAPI
-from fog05sdk.interfaces.FDU import FDU
+from fog05_sdk.interfaces.FDU import FDU
 import uuid
 import json
 import sys

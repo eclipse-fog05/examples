@@ -9,7 +9,7 @@
         "storage_size_gb": 3.0
     },
     "image": {
-        "uri": "file:///home/ubuntu/bench.qcow2",
+        "uri": "http://download.cirros-cloud.net/0.4.0/cirros-0.4.0-x86_64-disk.img",
         "checksum": "2935701ae23b433966a5eed237de981257b8af60",
         "format": "qcow2"
     },
@@ -21,22 +21,15 @@
         {
             "name": "eth0",
             "is_mgmt": false,
-            "if_type": "INTERNAL",
+            "if_type": "EXTERNAL",
             "mac_address": "be:ef:be:ef:00:01",
             "virtual_interface": {
-                "intf_type": "VIRTIO",
-                "vpci": "0:0:0",
+                "intf_type": "BRIDGED",
+                "vpci": "virbr0",
                 "bandwidth": 10
-            },
-            "cp_id": "fdu-cp1"
+            }
         }
     ],
     "io_ports": [],
-    "connection_points": [
-        {
-            "id": "fdu-cp1",
-            "name": "fdu-cp1",
-            "vld_ref": "6cc2aa30-1dcf-4c93-a57e-433fd0bd498e"
-        }
-    ]
+    "connection_points": []
 }

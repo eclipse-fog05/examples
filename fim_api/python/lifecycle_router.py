@@ -3,7 +3,7 @@ import uuid
 import json
 import sys
 import os
-from fog05sdk.interfaces.FDU import FDU
+from fog05_sdk.interfaces.FDU import FDU
 
 
 def read_file(filepath):
