@@ -31,13 +31,7 @@ def main(ip, fdufile, netfile):
 
 
 
-
-    #n1 = 'a2d358aa-af2b-42cb-8d23-a89e88b97e5c' #fosmed
     n1 = '4a560914-1c3e-4966-9fa8-7f0acc903253' #nuc
-    # n1 = '53712df2-9649-4a21-be2e-80eed00ff9ce' #ubuntuvm1
-    #n1 = 'a4589fae-0493-40cf-b976-2d03020d060d' #foskvm
-    # n1 = '53712df2-9649-4a21-be2e-80eed00ff9ce' #ubuntuvm1
-    # n1 = 'd07b095f-7948-4f9b-95cc-c61029f6c3c3' #fosdbg
 
     input("Press enter to create network")
     a.network.add_network(net_d)
@@ -46,9 +40,16 @@ def main(ip, fdufile, netfile):
     input('press enter to onboard descriptor')
     res = a.fdu.onboard(fdu_d)
     e_uuid = res.get_uuid()
-    input('Press enter to intantiate')
-    inst_info = a.fdu.instantiate(e_uuid, n1)
+    input('Press enter to define')
+    inst_info = a.fdu.define(e_uuid)
+    print(inst_info.to_json())
     instid = inst_info.get_uuid()
+
+    input('Press enter to configure')
+    a.fdu.configure(instid)
+
+    input('Press enter to start')
+    a.fdu.start(instid)
 
 
     # input('Press enter to stop')

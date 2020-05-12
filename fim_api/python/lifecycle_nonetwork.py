@@ -26,11 +26,6 @@ def main(ip, fdufile):
 
     fdu_d = FDU(json.loads(read_file(fdufile)))
 
-
-
-    n1 = '4a560914-1c3e-4966-9fa8-7f0acc903253' #nuc
-
-
     input('press enter to onboard descriptor')
     res = a.fdu.onboard(fdu_d)
     print(res.to_json())
@@ -40,7 +35,7 @@ def main(ip, fdufile):
 
 
     input('Press enter to define')
-    inst_info = a.fdu.define(e_uuid, n1)
+    inst_info = a.fdu.define(e_uuid)
     print(inst_info.to_json())
     instid = inst_info.get_uuid()
 
