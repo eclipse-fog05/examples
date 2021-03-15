@@ -228,8 +228,8 @@ You can monitor the status of the instance with `fosctl fim get instance`
 
 Once it is reported as "RUNNING" it is possible to start both the Joypad client and the camera client on the "operator node"
 
-- Camera client: `./zcam/target/release/zdisplay -m client -e tcp/<router ip>:7447 -p /robot/video
-- Joypad client `./zenoh-ros2-teleop/target/release/teleop tcp/<router ip>:7447
+- Camera client: `./zcam/target/release/zdisplay -m client -e tcp/<router ip>:7447 -p /robot/video`
+- Joypad client `./zenoh-ros2-teleop/target/release/teleop tcp/<router ip>:7447`
 
 
 You should see the camera feed from the robot and you should be able to move the robot using the left analog stick and the two triggers.
