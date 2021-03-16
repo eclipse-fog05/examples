@@ -80,6 +80,7 @@ $ cargo build --release
 Then clone and build the Joypad client on the "operator" machine:
 
 ```
+$ sudo apt install libudev-dev
 $ git clone https://github.com/atolab/zenoh-ros2-teleop
 $ cd zenoh-ros2-teleop
 $ cargo build --release --bin teleop
